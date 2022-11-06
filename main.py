@@ -23,3 +23,10 @@ def reverse(line):
         line_1.reverse()
         line[i]=line_1
     return 
+def transpose(line):
+    new_line=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+    for i in range(4):
+        for j in range(4):
+            new_line[i][j]=line[j][i]
+    line = new_line
+    return line 
