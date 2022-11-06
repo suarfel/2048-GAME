@@ -17,3 +17,9 @@ def merge(line):
                 new_line[i][j+1] = 0
     line=new_line
     return line
+def reverse(line):
+    for i in range(4):
+        line_1=line[i]
+        line_1.reverse()
+        line[i]=line_1
+    return 
