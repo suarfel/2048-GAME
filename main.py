@@ -30,3 +30,26 @@ def transpose(line):
             new_line[i][j]=line[j][i]
     line = new_line
     return line 
+def left(line):
+    line=merge(line)
+    return line
+
+def right(line):
+    line=reverse(line)
+    line=merge(line)
+    line=reverse(line)
+    return line
+
+def up(line):
+    line=transpose(line)
+    line=merge(line)
+    line=transpose(line)
+    return line
+
+def down(line):
+    line=transpose(line)
+    line=reverse(line)
+    line=merge(line)
+    line=reverse(line)
+    line=transpose(line)
+    return line
