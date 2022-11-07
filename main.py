@@ -53,3 +53,23 @@ def down(line):
     line=reverse(line)
     line=transpose(line)
     return line
+line=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+value=[0,1,2,3]
+while True:
+    i=random.choice(value)
+    j=random.choice(value)
+    if line[i][j]==0:
+        line[i][j]=random.choice([2,4])
+        for i in range(4):
+            print(line[i])
+        direction=input("Enter an input :")
+        if direction == "L":
+            line=left(line)
+        elif direction == "R":
+            line=right(line)
+        elif direction == "U":
+            line=up(line) 
+        elif direction == "D":
+            line=down(line)
+        else :
+            print("please enter a valid move !!")
